@@ -16,5 +16,4 @@
  * under the License.
  */
 
-export * from "./script-editor";
 export * from "./script-based-flow";
