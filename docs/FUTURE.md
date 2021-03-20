@@ -46,32 +46,34 @@ var onLoginRequest = function(context) {
 
 ### Identified Tasks
 
-- Remove @material/ui dependency and use semantic-ui instead - Done
-- Use less instead of css - Done
-- Move styles to @wso2is/theme - Pending
-- Refactor styles to align with console - Pending
-- Refactor API calls and use the http client from the SDK for authorization rather than basicauth - Pending
-- Make it a npm package - Pending
+- [x] Remove @material/ui dependency and use semantic-ui instead
+- [x] Use less instead of css
+- [ ] Move styles to @wso2is/theme
+- [ ] Refactor styles to align with console
+- [ ] Refactor API calls and use the http client from the SDK for authorization rather than basicauth
+- [ ] Make it a npm package
 
 ### Identified Improvements
 
-- Analyze the bundle and see the footprint due to having babel in runtime. - Pending
-- Think about the layout when integrated with the console. Maybe have a fullscreen option ? - Pending
-- Replace SVGs used in visual flow with simple icons and show screens only when hover on them. - Pending
-- Improve to support different cases such as onFail, switch case statements (Used in ACR-based template) etc. - Pending
-- Add functionality to show errors in the UI to handle the following scenario. - Pending
+- [ ] Analyze the bundle and see the footprint due to having babel in runtime.
+- [ ] Think about the layout when integrated with the console. Maybe have a fullscreen option ?
+- [ ] Replace SVGs used in visual flow with simple icons and show screens only when hover on them.
+- [ ] Improve to support different cases such as onFail, switch case statements (Used in ACR-based template) etc.
+- [ ] Add functionality to show errors in the UI to handle the following scenario.
+```js
 .throw(error){ new Error(error) }
-- Templates, roles are hardcoded currently. Have to get them from the server.- Pending
-- Add an actual script(maybe from Hardrock setup) and see the behaviour. - Pending
+```
+- [ ] Templates, roles are hardcoded currently. Have to get them from the server.
+- [ ] Add an actual script(maybe from Hardrock setup) and see the behaviour.
 
 ### Notes
 Following code has been used to open the Authentication Flow Composer from the console in a separate window.
-```ts
-const openAuthenticationFlowDesigner = (): void => {
-   window.open(`http://localhost:3000?appId=${appId}&callbackUrl=${window.location}`, 
-'_self','noopener');
-};
-```
+  ```ts
+  const openAuthenticationFlowDesigner = (): void => {
+     window.open(`http://localhost:3000?appId=${appId}&callbackUrl=${window.location}`, 
+  '_self','noopener');
+  };
+  ```
 
 Here callback url is used to route the user back to the console after updating the Authentication Flow from the composer.
 
